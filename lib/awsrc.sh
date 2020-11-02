@@ -5,9 +5,8 @@ function get_imdsv2_session_token()
 
 function set_imdsv2_session_token()
 {
-    #    export IMDSV2_SESSION_TOKEN=${IMDSV2_SESSION_TOKEN}:`get_session_token`
     if [ -z "${IMDSV2_SESSION_TOKEN}" ]; then
-	export IMDSV2_SESSION_TOKEN=`get_session_token`
+	export IMDSV2_SESSION_TOKEN=`get_imdsv2_session_token`
     fi
 }
 
